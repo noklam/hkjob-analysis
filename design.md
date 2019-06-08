@@ -4,7 +4,7 @@ An app that send new job notification
 # Features
 
 - [ ] Crawler runs every week
-- [ ]Features, subscribe to particular company
+- [ ] Features, subscribe to particular company
 - [ ] Weekly, send notification if new jobs - [ ] appears through Slack
 - [ ] parser to parse meta-data, such as job level, salary, company, title, location, education level etc.
 - [ ] A database to store all this data in a structural way
