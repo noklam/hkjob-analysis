@@ -25,6 +25,7 @@ Optionally:
 - [ ] Altair/Flask interactive Dashboard with Vue
 
 Tools
+* sphinx/mkdoc for doc generation, API site
 * pandas - data analysis
 * Plotly/altair
 * Django/Flask
