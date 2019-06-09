@@ -1,6 +1,8 @@
 An app that send new job notification
 =====================================
 
+I can probably use scrapy for replacement, but I want to practise individual component, and it allows me to use Airflow to schedule jobs for different component. It is also a good change to practice my OO programming and as a little fun exercise.
+
 # Features
 
 - [ ] Crawler runs every week
@@ -11,6 +13,7 @@ An app that send new job notification
 - [ ] A datalake to dump all those HTML files
 - [ ] Airflow will run these batch jobs daily, fail on retry
 - [ ] Validate if the site is crawled already, if so skip it.
+- [ ] Use Logger to replace print for generating systematic log
 
 
 Optionally:
@@ -37,6 +40,7 @@ Tools
 * SlackAPI
 * CI/CD - Travis
 * Hosting on Github pages
+* logger
 
 Why weekly?
 Jobsdb usually persist for 1/2 week at least, crawling weekly reduce pressure on server and is reasonable

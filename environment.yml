@@ -11,6 +11,7 @@ dependencies:
 - pip:
   - jupytext
   - jupyter
+  - requests
 
 
   # pip install jupyter_contrib_nbextensions
