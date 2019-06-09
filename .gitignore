@@ -1,3 +1,5 @@
 *.pyc
 .idea
-setting.json
+settings.json
+*.xml
+*.exe
