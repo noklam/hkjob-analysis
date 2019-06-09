@@ -1,0 +1,13 @@
+name: project
+# channels:
+
+dependencies:
+- flask
+- selenium
+- pytest
+- beautifulsoup4
+# - request
+
+- pip:
+  - jupytext
+  - jupyter
