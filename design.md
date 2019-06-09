@@ -14,6 +14,7 @@ I can probably use scrapy for replacement, but I want to practise individual com
 - [ ] Airflow will run these batch jobs daily, fail on retry
 - [ ] Validate if the site is crawled already, if so skip it.
 - [ ] Use Logger to replace print for generating systematic log
+- [ ] Multi-Process parsing HTML
 
 
 Optionally:

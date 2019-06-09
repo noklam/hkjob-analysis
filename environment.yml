@@ -12,6 +12,8 @@ dependencies:
   - jupytext
   - jupyter
   - requests
+  - PyFunctional
+  - tqdm
 
 
   # pip install jupyter_contrib_nbextensions
