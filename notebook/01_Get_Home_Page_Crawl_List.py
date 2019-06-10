@@ -41,9 +41,9 @@ def extract_href(x):
 
 # %%
 class Crawler:
-    class_no_jobs = "_1f-toO_"  # Subject to change
-    class_jobs_pane = "_35U47DP"
-    jobs_per_page = 30
+    _class_no_jobs = "_1f-toO_"  # Subject to change
+    _class_jobs_pane = "_35U47DP"
+    _jobs_per_page = 30
 
     def __init__(self,
                  base_url: str = "https://hk.jobsdb.com/hk/jobs/information-technology/"):
@@ -53,7 +53,7 @@ class Crawler:
 
     def get_numbers_of_job(self):
         # '1-30 of 7634 jobs'
-        string = self.soup_homepage.find("span", {"class": self.class_no_jobs}).parent.get_text()
+        string = self.soup_homepage.find("span", {"class": self._class_no_jobs}).parent.get_text()
         pattern = re.compile(r'.+ of (\d+) jobs')
         search_group = pattern.search(string)
         self.no_jobs = int(search_group.group(1))  # Extract the first group, group(0) is full match
@@ -65,7 +65,7 @@ class Crawler:
     def get_numbers_of_page(self):
         if self.no_jobs is None:
             self.get_numbers_of_job(self.soup)
-        self.no_pages = self.no_jobs // self.jobs_per_page + 1
+        self.no_pages = self.no_jobs // self._jobs_per_page + 1
         print(f"There are {self.no_pages} pages")
         return self.no_jobs
 
