@@ -73,13 +73,10 @@ class Crawler:
         print('Start Crawling')
 
         jobs_list = []
-        current_page = 1
-        page_to_crawl = self.base_url + str(current_page)
-
-        req = requests.get(page_to_crawl)
-        soup = BeautifulSoup(req.content, "lxml")
-
         for current_page in tqdm(range(1, self.no_pages + 1)):
+            page_to_crawl = self.base_url + str(current_page)
+            req = requests.get(page_to_crawl)
+            soup = BeautifulSoup(req.content, "lxml")
             jobs_list = jobs_list + self.parse_href(soup)
 
         print("Finish")
@@ -107,8 +104,6 @@ class Crawler:
 
 # %%
 crawler = Crawler()
-
-# %%
 crawler.get_numbers_of_job()  # Dirty Hack
 crawler.get_numbers_of_page()
 
@@ -123,7 +118,6 @@ crawler.jobs_list = crawler.execute()
 def test_get_page_response_200(request: requests.models.Response):
     assert request.status_code == 200
 
-
 home_url = "https://hk.jobsdb.com/hk/jobs/information-technology/1"
 req = requests.get(home_url)
 test_get_page_response_200(req)
@@ -134,6 +128,5 @@ def test_is_job_href():
     crawler = Crawler()
     href = "https://hk.jobsdb.com/hk/en/job/associate-avp-vp-debt-capital-market-100003007140188"
     assert crawler.is_job_href(href)
-
 
 test_is_job_href()
