@@ -1,3 +1,7 @@
+import pytest
+
+
+@pytest.mark.slow
 def test_selenium():
     from selenium import webdriver
     driver = webdriver.Chrome()

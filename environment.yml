@@ -6,12 +6,12 @@ dependencies:
 - selenium
 - pytest
 - beautifulsoup4
-# - request
+- lxml
+- requests
 
 - pip:
   - jupytext
   - jupyter
-  - requests
   - PyFunctional
   - tqdm
 
